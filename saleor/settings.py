@@ -1,3 +1,11 @@
+from dotenv import load_dotenv
+import os
+
+env_path = os.path.join(os.path.dirname(__file__), "..", ".env")
+load_dotenv(os.path.abspath(env_path))
+
+DEFAULT_FILE_STORAGE = "storages.backends.s3.S3Storage"
+
 import datetime
 import logging
 import os
